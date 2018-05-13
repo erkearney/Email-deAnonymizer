@@ -1,7 +1,7 @@
 # Email-deAnonymizer
 A small project I created for my Spring 2018 Introduction to Machine Learning independent study course
 
-This model uses the Enron Email Dataset (https://www.cs.cmu.edu/~enron/) to classifier emails based on their original senders.
+This model uses the Enron Email Dataset (https://www.cs.cmu.edu/~enron/) to classify emails based on their original senders.
 
 To use this program:
 1. Download the Enron Email Datasat (https://www.cs.cmu.edu/~enron/), make sure you have a stable internet connection and lots of space.
