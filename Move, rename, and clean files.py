@@ -1,4 +1,4 @@
-""" Thanks to these Stackoverflow thread for helping me write this:
+""" Thanks to these Stackoverflow threads for helping me write this:
 https://stackoverflow.com/questions/123198/how-do-i-copy-a-file-in-python
 https://stackoverflow.com/questions/8933237/how-to-find-if-directory-exists-in-python
 https://stackoverflow.com/questions/273192/how-can-i-create-a-directory-if-it-does-not-exist
@@ -61,6 +61,3 @@ moveAndRenameFiles(datasetLocation, fileDestination)
 for user in os.listdir(fileDestination):
     for email in os.listdir(fileDestination + user + "/"):
         cleanFiles(fileDestination + user + "/" + email)
-
-
-# cleanFiles(fileDestination + user + "/" + email)
