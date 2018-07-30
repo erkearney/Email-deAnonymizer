@@ -8,4 +8,4 @@ To use this program:
 2. Open "Move, rename, and clean files.py" and change datasetLocation to wherever you saved the Enron Email dataset and change fileDestination to wherever you would like the prepared files to go.
 3. Save and run "Move, rename, and clean files.py", this might take a couple minutes.
 4. Open "Email_deanonymizer.py" and change dataset_location to wherever you saved the files created by "Move, rename, and clean files.py" earlier.
-5. Save and run "Email_deanonymizer.py", be prepared to have your CPU maxed out for a while.
+5. Save and run "Email_deanonymizer.py", be prepared to have your CPU suffer for a while.
