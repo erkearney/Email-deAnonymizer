@@ -13,7 +13,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn import metrics
 
 if __name__ == "__main__":
-	# NOTE: we put the following in a 'if __name__ == "__main__"' protected
+    # NOTE: we put the following in a 'if __name__ == "__main__"' protected
     # block to be able to use a multi-core grid search that also works under
     # Windows, see: http://docs.python.org/library/multiprocessing.html#windows
     # The multiprocessing module is used as the backend of joblib.Parallel
@@ -35,15 +35,15 @@ if __name__ == "__main__":
 	vectorizer = TfidfVectorizer(min_df=10, max_df=0.90)
 
 	Perceptron_clf = Pipeline([('vect', vectorizer),
-								('clf', Perceptron(tol=1e-3)),
-								])
+				   ('clf', Perceptron(tol=1e-3)),
+				   ])
 
 	# Use a grid search to find optimal parameters
 	Perceptron_parameters = {
         'vect__ngram_range': [(1, 1), (1, 2)],
         'clf__alpha': [1e-2, 1e-3, 1e-4],
         'clf__tol': [1e-2, 1e-3, 1e-4],
-    }
+        }
 	Perceptron_grid_search = GridSearchCV(Perceptron_clf, Perceptron_parameters, n_jobs=-1)
 	Perceptron_grid_search.fit(training_set, y_train)
 
@@ -74,7 +74,7 @@ if __name__ == "__main__":
 	MNB_parameters = {
         'vect__ngram_range': [(1, 1), (1, 2)],
         'clf__alpha': [1e-2, 1e-3, 1e-4],
-    }
+        }
 	MNB_grid_search = GridSearchCV(MNB_clf, MNB_parameters, n_jobs=-1)
 	MNB_grid_search.fit(training_set, y_train)
 
@@ -108,7 +108,7 @@ if __name__ == "__main__":
         'clf__penalty': ['l1', 'l2'],
         'clf__tol': [1e-2, 1e-3, 1e-4],
         'clf__C': [0.1, 1.0, 10.0, 100, 1000]
-    }
+        }
 	LinearSVC_grid_search = GridSearchCV(LinearSVC_clf, LinearSVC_parameters, n_jobs=-1)
 	LinearSVC_grid_search.fit(training_set, y_train)
 
