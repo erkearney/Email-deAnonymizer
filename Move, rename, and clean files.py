@@ -49,7 +49,7 @@ def cleanFiles(fileDestination):
         line.strip()
         # I'm actually not sure why line.strip() here removes blank lines, but, it works. . .
         if deleting == False and line.strip(): file.write(line)
-        # Every emails meta ends with "X-FileName: " and the sender's name
+        # Every emails' meta ends with "X-FileName: " and the sender's name
         # So once we reach this line, we switch the 'deleting' boolean to False
         if "X-FileName: " in line: deleting = False
 
